@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja & Nami</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <br>
+    <br>
+    <div class="ninja">
+    <img class="photoNinja" src="Ninja.jpg" alt="Ninja">
+    <div class="overNinja">
+        <div class="tekstiNinja">
+            <b>Name:</b> Ninja <br>
+            <b>Breed:</b> Karelian Bear Dog <br>
+            <b>Age:</b> 11 years <br>
+            <b>Favorite thing:</b> cheese <br>
+            <b>Favorite activity:</b> relaxing <br>
+            <b>B-day party in: </b><p id="demoNinja"></p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="nami">
+    <img class="photoNami" src="Nami.jpg" alt="Nami">
+    <div class="overNami">
+        <div class="tekstiNami">
+            <b>Name:</b> Nami <br>
+            <b>Breed:</b> Welsh Corgi Cardigan <br>
+            <b>Age:</b> 2 years <br>
+            <b>Favorite thing:</b> everything <br>
+            <b>Favorite activity:</b> toys <br>
+            <b>B-day party in: </b><p id="demoNami"></p>
+        </div>
+    </div>
+</div>
+<script>
+    var ninjaPaiva = new Date("July 9, 2021 01:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = ninjaPaiva - now;
+    
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demoNinja").innerHTML = days + " d " + hours + " h " + minutes + " min";
+})
+
+var namiPaiva = new Date("May 1, 2021 01:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = namiPaiva - now;
+    
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("demoNami").innerHTML = days + " d " + hours + " h " + minutes + " min";
+})
+</script>
+</body>
+</html>
